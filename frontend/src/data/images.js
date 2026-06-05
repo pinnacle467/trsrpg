@@ -2,6 +2,7 @@
 // so the site is fully self-contained and does not depend on any external host.
 
 export const LOGO = '/realm/logo.png';
+export const MK_LOGO = '/realm/mk_logo.png';
 export const WEBSITE_BG = '/realm/website_bg.jpg';
 export const MEDIA_BG = '/realm/media_bg.jpg';
 export const TRAILER = '/realm/trailer.mp4';

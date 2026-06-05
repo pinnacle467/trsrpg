@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
-import { LOGO } from '@/data/images';
+import { LOGO, MK_LOGO } from '@/data/images';
 import { GAME } from '@/data/game';
 
-// The Realm Survivor RPG logo lockup. Sizes are ~1.5x the previous lockup.
-export const Wordmark = ({ className, size = 'nav', to = '/' }) => {
+// Dual lockup: The Realm Survivor RPG logo + Monarchy Knuckle Games logo, equal heights.
+export const Wordmark = ({ className, size = 'navSm' }) => {
   const heights = {
     navSm: 'h-[8.4rem] sm:h-[10.5rem]',
     nav: 'h-[12.6rem] sm:h-[14.7rem]',
@@ -14,28 +14,41 @@ export const Wordmark = ({ className, size = 'nav', to = '/' }) => {
     xl: 'h-44 sm:h-64 lg:h-80',
   };
 
-  const logo = (
-    <img
-      src={LOGO}
-      alt={GAME.title}
-      className={cn(
-        'w-auto max-w-[88vw] object-contain drop-shadow-[0_6px_30px_rgba(124,58,237,0.45)]',
-        heights[size],
-      )}
-    />
+  const imgCls = cn(
+    'w-auto object-contain drop-shadow-[0_6px_30px_rgba(124,58,237,0.45)]',
+    heights[size],
   );
 
-  if (!to) return <div data-testid="wordmark-logo" className={className}>{logo}</div>;
-
   return (
-    <Link
-      to={to}
-      aria-label={`${GAME.title} home`}
-      data-testid="wordmark-logo"
-      className={cn('inline-flex items-center', className)}
+    <div
+      className={cn('flex items-center gap-3 sm:gap-5', className)}
+      data-testid="wordmark-logos"
     >
-      {logo}
-    </Link>
+      <Link
+        to="/"
+        aria-label={`${GAME.title} home`}
+        data-testid="wordmark-logo"
+        className="inline-flex shrink-0 items-center"
+      >
+        <img src={LOGO} alt={GAME.title} className={imgCls} />
+      </Link>
+      <span
+        aria-hidden="true"
+        className="hidden h-2/3 w-px bg-white/15 sm:block"
+      />
+      <Link
+        to="/pimps"
+        aria-label="Monarchy Knuckle Games"
+        data-testid="wordmark-mk-logo"
+        className="inline-flex shrink-0 items-center"
+      >
+        <img
+          src={MK_LOGO}
+          alt="Monarchy Knuckle Games"
+          className={cn(imgCls, 'rounded-full bg-white/[0.04] p-1')}
+        />
+      </Link>
+    </div>
   );
 };
 

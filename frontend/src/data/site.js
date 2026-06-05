@@ -5,7 +5,7 @@ export const NAV_LINKS = [
   { label: 'Home', to: '/' },
   { label: 'Media', to: '/media' },
   { label: 'Support', to: '/support' },
-  { label: 'PIMPS', to: '/pimps' },
+  { label: 'MK GAMES', to: '/pimps' },
 ];
 
 export const SOCIALS = [
