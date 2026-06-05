@@ -7,8 +7,8 @@ import { GAME } from '@/data/game';
 // Sizes are tuned smaller so both logos + the full nav fit cleanly at every breakpoint.
 export const Wordmark = ({ className, size = 'navSm' }) => {
   const heights = {
-    navSm: 'h-20 sm:h-24 lg:h-28',
-    nav: 'h-24 sm:h-28 lg:h-36',
+    navSm: 'h-24 sm:h-28 lg:h-36',
+    nav: 'h-28 sm:h-32 lg:h-44',
     sm: 'h-16 sm:h-20',
     md: 'h-24',
     lg: 'h-32 sm:h-44',
