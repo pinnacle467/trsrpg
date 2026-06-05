@@ -55,7 +55,7 @@ module.exports = {
       backgroundImage: {
         'hero-grad': 'linear-gradient(135deg, #0A0A0F 0%, #1a0a2e 50%, #0f172a 100%)',
         'btn-grad': 'linear-gradient(90deg, #6B21A8, #2563EB)',
-        'text-grad': 'linear-gradient(90deg, #9333EA, #3B82F6)',
+        'text-grad': 'linear-gradient(90deg, #D8B4FE, #93C5FD)',
       },
       keyframes: {
         'accordion-down': { from: { height: '0' }, to: { height: 'var(--radix-accordion-content-height)' } },
