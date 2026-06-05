@@ -46,7 +46,7 @@ export const ComingSoon = ({ label, testid }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.25 }}
         >
-          This realm is still forming. Check back soon — and wishlist {GAME.title} to be the first to
+          This realm is still forming. Check back soon and wishlist {GAME.title} to be the first to
           know when it opens.
         </motion.p>
 

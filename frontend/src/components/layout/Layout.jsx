@@ -10,7 +10,7 @@ export const Layout = ({ children }) => {
 
   return (
     <div className="relative min-h-screen text-white">
-      {/* Fixed full-page background — swaps for the Media page */}
+      {/* Fixed full-page background swaps for the Media page */}
       <div className="fixed inset-0 -z-10" aria-hidden="true">
         <img
           src={bg}

@@ -1,4 +1,4 @@
-// The Realm Survivor RPG — all assets are bundled locally (served from /realm)
+// The Realm Survivor RPG all assets are bundled locally (served from /realm)
 // so the site is fully self-contained and does not depend on any external host.
 
 export const LOGO = '/realm/logo.png';

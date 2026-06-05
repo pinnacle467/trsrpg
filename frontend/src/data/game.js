@@ -1,4 +1,4 @@
-// The Realm Survivor RPG — game content sourced from the official Steam page.
+// The Realm Survivor RPG game content sourced from the official Steam page.
 // Developer & Publisher: Monarchy Knuckle Games.
 
 export const GAME = {
@@ -12,9 +12,9 @@ export const GAME = {
   hook:
     "Fight in this urban open world RPG Beat 'em up survival game. Beat gangs, robots, ninjas, orcs, and many villains of the realms. Using bare fist, weapons, magic, meditation to stop your enemies. Take on mission acts, challenging tasks, the moral choice will matter in the end.",
   story: [
-    'Dr Zega commands a fleet of time-traveler clones, sending them into present-day "Suburb City, Michigan" to rewrite the timeline and every other realm — bending the entire universe to his demonic will.',
+    'Dr Zega commands a fleet of time-traveler clones, sending them into present-day "Suburb City, Michigan" to rewrite the timeline and every other realm bending the entire universe to his demonic will.',
     'He has placed a bounty on Benard, the one survivor able to slip between realms and shape the universe himself. Cross dimensions to aid the corruption, neutralize the chaos, or answer the call and change the realms for the better.',
-    'This is a 3rd / 1st person open-world survival beat \'em up. Every mission is a moral choice — demonic, deviant or divine. You can even win without conflict at all. Choose wisely, Realm Survivor.',
+    'This is a 3rd / 1st person open-world survival beat \'em up. Every mission is a moral choice demonic, deviant or divine. You can even win without conflict at all. Choose wisely, Realm Survivor.',
   ],
 };
 
@@ -32,7 +32,7 @@ export const FEATURES = [
   {
     icon: 'MoonStar',
     title: 'Lost-Time Cycles',
-    desc: 'Time is gone — no clocks, only day and night. Survive the rhythm of each realm.',
+    desc: 'Time is gone no clocks, only day and night. Survive the rhythm of each realm.',
   },
   {
     icon: 'Zap',
@@ -42,7 +42,7 @@ export const FEATURES = [
   {
     icon: 'Sparkles',
     title: 'Superhuman Abilities',
-    desc: 'Super speed, teleporting, raw strength, fly-glide and more — bend reality to your fists.',
+    desc: 'Super speed, teleporting, raw strength, fly-glide and more bend reality to your fists.',
   },
   {
     icon: 'Car',
@@ -95,6 +95,6 @@ export const PATHS = [
   {
     tag: 'Divine',
     color: 'blue',
-    desc: 'Answer the call and change the realms for the better — even without conflict.',
+    desc: 'Answer the call and change the realms for the better even without conflict.',
   },
 ];

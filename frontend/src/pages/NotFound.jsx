@@ -16,7 +16,7 @@ export default function NotFound() {
           <span className="text-gradient-animated">404</span>
         </h1>
         <p className="mt-4 max-w-md text-base text-white/60">
-          This realm doesn&apos;t exist — or time has erased it. Let&apos;s get you back.
+          This realm doesn&apos;t exist or time has erased it. Let&apos;s get you back.
         </p>
         <GButton to="/" size="lg" className="mt-9" data-testid="notfound-home">
           <Home size={18} /> Back to Home
