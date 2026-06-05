@@ -3,6 +3,12 @@
 
 export const LOGO = '/realm/logo.png';
 export const MK_LOGO = '/realm/mk_logo.png';
+export const REALMS = [
+  { key: 'realm_1', src: '/realm/realms/realm_1.jpg', alt: 'Realm of the Realm Survivor RPG' },
+  { key: 'realm_2', src: '/realm/realms/realm_2.jpg', alt: 'Realm of the Realm Survivor RPG' },
+  { key: 'realm_3', src: '/realm/realms/realm_3.png', alt: 'Realm of the Realm Survivor RPG' },
+  { key: 'realm_4', src: '/realm/realms/realm_4.png', alt: 'Realm of the Realm Survivor RPG' },
+];
 export const WEBSITE_BG = '/realm/website_bg.jpg';
 export const MEDIA_BG = '/realm/media_bg.jpg';
 export const TRAILER = '/realm/trailer.mp4';

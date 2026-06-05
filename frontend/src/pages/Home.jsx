@@ -6,7 +6,7 @@ import {
   Users, Hammer, Swords, Coins, Trophy, Backpack,
 } from 'lucide-react';
 import { GAME, FEATURES, PATHS } from '@/data/game';
-import { TRAILER, TRAILER_POSTER, SHOTS } from '@/data/images';
+import { TRAILER, TRAILER_POSTER, SHOTS, REALMS } from '@/data/images';
 import Atmosphere from '@/components/common/Atmosphere';
 import Reveal from '@/components/common/Reveal';
 import SectionHeading from '@/components/common/SectionHeading';
@@ -236,12 +236,12 @@ export default function Home() {
             </Link>
           </div>
           <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-4">
-            {SHOTS.slice(2, 6).map((s, i) => (
+            {REALMS.map((s, i) => (
               <Reveal key={s.key} delay={i * 0.08}>
                 <Link to="/media" className="group block overflow-hidden rounded-xl ring-1 ring-white/10">
                   <img
-                    src={s.full}
-                    alt="The Realm Survivor RPG screenshot"
+                    src={s.src}
+                    alt={s.alt}
                     loading="lazy"
                     className="aspect-video w-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
