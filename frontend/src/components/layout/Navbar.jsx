@@ -32,23 +32,23 @@ export const Navbar = () => {
         className={cn(
           'fixed inset-x-0 top-0 z-[100] transition-all duration-300',
           scrolled
-            ? 'bg-ink-deep/80 backdrop-blur-xl border-b border-white/10 py-2 shadow-[0_10px_40px_-20px_rgba(0,0,0,0.9)]'
-            : 'bg-gradient-to-b from-ink-deep/70 to-transparent py-3',
+            ? 'bg-ink-deep/90 backdrop-blur-xl border-b border-white/10 py-2 shadow-[0_10px_40px_-20px_rgba(0,0,0,0.9)]'
+            : 'bg-ink-deep/70 backdrop-blur-md border-b border-white/5 py-3',
         )}
         data-testid="main-navbar"
       >
         <div className="mx-auto flex w-full max-w-[1600px] items-center justify-between gap-4 px-5 sm:px-8">
           <Wordmark size={scrolled ? 'navSm' : 'nav'} />
 
-          <nav className="hidden lg:flex items-center gap-8" aria-label="Primary">
+          <nav className="hidden lg:flex items-center gap-16" aria-label="Primary">
             {NAV_LINKS.map((l) => (
               <Link
                 key={l.to}
                 to={l.to}
                 data-testid={`nav-${l.label.toLowerCase()}`}
                 className={cn(
-                  'font-display uppercase text-lg tracking-wide transition-colors link-underline',
-                  isActive(l.to) ? 'text-white' : 'text-white/60 hover:text-white',
+                  'font-display uppercase text-5xl tracking-wide transition-colors link-underline [text-shadow:_0_2px_10px_rgba(0,0,0,0.95),_0_0_2px_rgba(0,0,0,0.9)]',
+                  isActive(l.to) ? 'text-white' : 'text-white/95 hover:text-white',
                 )}
               >
                 {l.label}
@@ -60,10 +60,10 @@ export const Navbar = () => {
             <GButton
               href={GAME.steam}
               size="sm"
-              className="hidden whitespace-nowrap sm:inline-flex"
+              className="hidden whitespace-nowrap sm:inline-flex !text-4xl !px-12 !py-6 !gap-4 [text-shadow:_0_2px_8px_rgba(0,0,0,0.7)]"
               data-testid="nav-wishlist"
             >
-              <Gamepad2 size={15} /> Wishlist on Steam
+              <Gamepad2 size={45} /> Wishlist on Steam
             </GButton>
             <button
               onClick={() => setOpen(true)}

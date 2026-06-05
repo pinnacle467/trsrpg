@@ -18,8 +18,8 @@ export const Layout = ({ children }) => {
           className="h-full w-full object-cover"
           data-testid="page-background"
         />
-        <div className="absolute inset-0 bg-ink-deep/72" />
-        <div className="absolute inset-0 bg-gradient-to-b from-ink-deep/40 via-transparent to-ink-deep/80" />
+        <div className="absolute inset-0 bg-ink-deep/85" />
+        <div className="absolute inset-0 bg-gradient-to-b from-ink-deep/60 via-ink-deep/40 to-ink-deep/90" />
       </div>
 
       <a

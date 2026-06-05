@@ -17,7 +17,7 @@
     --secondary: 255 14% 14%;
     --secondary-foreground: 0 0% 98%;
     --muted: 255 12% 14%;
-    --muted-foreground: 240 5% 65%;
+    --muted-foreground: 240 5% 82%;
     --accent: 271 50% 18%;
     --accent-foreground: 0 0% 98%;
     --destructive: 0 72% 51%;
@@ -39,6 +39,14 @@
   body {
     @apply bg-ink text-foreground font-sans antialiased;
     background-color: #0A0A0F;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85), 0 0 2px rgba(0, 0, 0, 0.6);
+  }
+  /* Disable the global text-shadow on small UI bits that don't need it */
+  input, textarea, select, code, pre, .no-text-shadow {
+    text-shadow: none;
+  }
+  p, li, span, h1, h2, h3, h4, h5, h6, a, button {
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.85), 0 0 1px rgba(0, 0, 0, 0.6);
   }
   ::selection {
     background: rgba(147, 51, 234, 0.35);
