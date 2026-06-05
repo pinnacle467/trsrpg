@@ -6,8 +6,8 @@ import { GAME } from '@/data/game';
 // The Realm Survivor RPG logo lockup. Sizes are ~1.5x the previous lockup.
 export const Wordmark = ({ className, size = 'nav', to = '/' }) => {
   const heights = {
-    navSm: 'h-48 sm:h-60',
-    nav: 'h-72 sm:h-[21rem]',
+    navSm: 'h-[8.4rem] sm:h-[10.5rem]',
+    nav: 'h-[12.6rem] sm:h-[14.7rem]',
     sm: 'h-16 sm:h-20',
     md: 'h-24',
     lg: 'h-32 sm:h-44',

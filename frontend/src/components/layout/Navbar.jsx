@@ -31,15 +31,13 @@ export const Navbar = () => {
       <header
         className={cn(
           'fixed inset-x-0 top-0 z-[100] transition-all duration-300',
-          scrolled
-            ? 'bg-ink-deep/90 backdrop-blur-xl border-b border-white/10 py-2 shadow-[0_10px_40px_-20px_rgba(0,0,0,0.9)]'
-            : 'bg-ink-deep/70 backdrop-blur-md border-b border-white/5 py-3',
+          'bg-ink-deep/90 backdrop-blur-xl border-b border-white/10 py-2 shadow-[0_10px_40px_-20px_rgba(0,0,0,0.9)]',
         )}
         data-testid="main-navbar"
       >
         <div className="mx-auto flex w-full max-w-[1600px] items-center justify-between gap-4 px-5 sm:px-8">
           <div className="flex items-center gap-10 lg:gap-16">
-            <Wordmark size={scrolled ? 'navSm' : 'nav'} />
+            <Wordmark size="navSm" />
 
             <nav className="hidden lg:flex items-center gap-16" aria-label="Primary">
               {NAV_LINKS.map((l) => (
@@ -62,10 +60,10 @@ export const Navbar = () => {
             <GButton
               href={GAME.steam}
               size="sm"
-              className="hidden whitespace-nowrap sm:inline-flex !text-4xl !px-12 !py-6 !gap-4 [text-shadow:_0_2px_8px_rgba(0,0,0,0.7)]"
+              className="hidden whitespace-nowrap sm:inline-flex !text-2xl !px-7 !py-4 !gap-2.5 ml-6 lg:ml-12 [text-shadow:_0_2px_8px_rgba(0,0,0,0.7)]"
               data-testid="nav-wishlist"
             >
-              <Gamepad2 size={45} /> Wishlist on Steam
+              <Gamepad2 size={27} /> Wishlist on Steam
             </GButton>
             <button
               onClick={() => setOpen(true)}
