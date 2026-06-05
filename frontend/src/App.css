@@ -1,0 +1,6 @@
+/* Global app shell styles. Most styling is handled by Tailwind + index.css. */
+.App {
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
