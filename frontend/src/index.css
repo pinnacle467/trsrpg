@@ -84,13 +84,17 @@ html {
     @apply mx-auto w-full max-w-[1280px] px-5 sm:px-8;
   }
   .text-gradient {
-    @apply bg-text-grad bg-clip-text text-transparent;
-    background-size: 200% auto;
+    color: #ffffff;
+    background-image: none;
+    -webkit-background-clip: initial;
+    background-clip: initial;
   }
   .text-gradient-animated {
-    @apply bg-clip-text text-transparent animate-gradient-shift;
-    background-image: linear-gradient(90deg, #9333EA, #3B82F6, #9333EA);
-    background-size: 200% auto;
+    color: #ffffff;
+    background-image: none;
+    -webkit-background-clip: initial;
+    background-clip: initial;
+    animation: none;
   }
   .glass {
     @apply bg-white/[0.04] backdrop-blur-md border border-white/10;
@@ -103,7 +107,7 @@ html {
     background-size: 180% auto;
   }
   .eyebrow {
-    @apply font-display uppercase tracking-[0.35em] text-xs sm:text-sm text-brand-purple/90;
+    @apply font-display uppercase tracking-[0.35em] text-xs sm:text-sm text-white/95;
   }
   .heading {
     @apply font-display font-bold uppercase tracking-tight;

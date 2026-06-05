@@ -38,23 +38,25 @@ export const Navbar = () => {
         data-testid="main-navbar"
       >
         <div className="mx-auto flex w-full max-w-[1600px] items-center justify-between gap-4 px-5 sm:px-8">
-          <Wordmark size={scrolled ? 'navSm' : 'nav'} />
+          <div className="flex items-center gap-10 lg:gap-16">
+            <Wordmark size={scrolled ? 'navSm' : 'nav'} />
 
-          <nav className="hidden lg:flex items-center gap-16" aria-label="Primary">
-            {NAV_LINKS.map((l) => (
-              <Link
-                key={l.to}
-                to={l.to}
-                data-testid={`nav-${l.label.toLowerCase()}`}
-                className={cn(
-                  'font-display uppercase text-5xl tracking-wide transition-colors link-underline [text-shadow:_0_2px_10px_rgba(0,0,0,0.95),_0_0_2px_rgba(0,0,0,0.9)]',
-                  isActive(l.to) ? 'text-white' : 'text-white/95 hover:text-white',
-                )}
-              >
-                {l.label}
-              </Link>
-            ))}
-          </nav>
+            <nav className="hidden lg:flex items-center gap-16" aria-label="Primary">
+              {NAV_LINKS.map((l) => (
+                <Link
+                  key={l.to}
+                  to={l.to}
+                  data-testid={`nav-${l.label.toLowerCase()}`}
+                  className={cn(
+                    'font-display uppercase text-5xl tracking-wide transition-colors link-underline [text-shadow:_0_2px_10px_rgba(0,0,0,0.95),_0_0_2px_rgba(0,0,0,0.9)]',
+                    isActive(l.to) ? 'text-white' : 'text-white/95 hover:text-white',
+                  )}
+                >
+                  {l.label}
+                </Link>
+              ))}
+            </nav>
+          </div>
 
           <div className="flex items-center gap-3">
             <GButton

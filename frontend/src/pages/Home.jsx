@@ -95,10 +95,10 @@ export default function Home() {
               transition={{ duration: 0.7, delay: 0.1 }}
             >
               The <span className="text-gradient-animated">Realm</span> Survivor
-              <span className="ml-2 align-top text-2xl text-brand-purple sm:text-3xl">RPG</span>
+              <span className="ml-2 align-top text-2xl text-white sm:text-3xl">RPG</span>
             </motion.h1>
             <motion.p
-              className="mt-5 font-display text-xl uppercase tracking-wider text-brand-purple"
+              className="mt-5 font-display text-xl uppercase tracking-wider text-white"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.7, delay: 0.25 }}
