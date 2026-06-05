@@ -10,7 +10,7 @@ export const GAME = {
   steam: 'https://store.steampowered.com/app/4008180/The_Realm_Survivor_RPG/',
   tagline: 'Time no longer exists.',
   hook:
-    "Fight through an urban open-world beat 'em up survival RPG. Battle gangs, robots, ninjas, orcs and the villains of every realm with bare fists, weapons, magic and meditation.",
+    "Fight in this urban open world RPG Beat 'em up survival game. Beat gangs, robots, ninjas, orcs, and many villains of the realms. Using bare fist, weapons, magic, meditation to stop your enemies. Take on mission acts, challenging tasks, the moral choice will matter in the end.",
   story: [
     'Dr Zega commands a fleet of time-traveler clones, sending them into present-day "Suburb City, Michigan" to rewrite the timeline and every other realm — bending the entire universe to his demonic will.',
     'He has placed a bounty on Benard, the one survivor able to slip between realms and shape the universe himself. Cross dimensions to aid the corruption, neutralize the chaos, or answer the call and change the realms for the better.',
