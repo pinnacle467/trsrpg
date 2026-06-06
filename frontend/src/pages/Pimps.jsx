@@ -7,7 +7,7 @@ import Reveal from '@/components/common/Reveal';
 import GButton from '@/components/common/GButton';
 import { MK_LOGO } from '@/data/images';
 
-const CONTACT_EMAIL = 'realmsurvivor@gmail.com';
+const CONTACT_EMAIL = 'support@therealmsurvivorrpg.com';
 
 export default function Pimps() {
   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' });
