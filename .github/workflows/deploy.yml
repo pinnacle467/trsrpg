@@ -1,0 +1,57 @@
+name: Build & Deploy to Hostinger
+
+# Runs on every push to main. The job builds the React app and force-pushes the
+# build output to the `dist` branch. Hostinger's GitHub integration is configured
+# to watch the `dist` branch and pull into public_html automatically.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}   # also lets you trigger a deploy manually from the Actions tab
+
+permissions:
+  contents: write
+
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'yarn'
+          cache-dependency-path: frontend/yarn.lock
+
+      - name: Install dependencies
+        working-directory: frontend
+        run: yarn install --frozen-lockfile
+
+      - name: Build production bundle
+        working-directory: frontend
+        run: yarn build
+        env:
+          CI: false   # CRA treats warnings as errors with CI=true; we don't want that
+
+      - name: Ensure .htaccess is in build output
+        run: |
+          if [ ! -f frontend/build/.htaccess ]; then
+            cp frontend/public/.htaccess frontend/build/.htaccess
+          fi
+          ls -la frontend/build/.htaccess
+
+      - name: Publish to dist branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./frontend/build
+          publish_branch: dist
+          force_orphan: true
+          commit_message: "deploy: ${{ github.event.head_commit.message || 'manual run' }}"
