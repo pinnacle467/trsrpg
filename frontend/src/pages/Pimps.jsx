@@ -17,13 +17,40 @@ export default function Pimps() {
 
   const onSubmit = (e) => {
     e.preventDefault();
+
+    // Build the email body with each form field clearly labeled. Using \r\n for
+    // maximum compatibility across mail clients (Gmail / Outlook / Mail.app).
+    const lines = [
+      `Name:    ${form.name || '(not provided)'}`,
+      `Email:   ${form.email || '(not provided)'}`,
+      `Subject: ${form.subject || '(not provided)'}`,
+      '',
+      '------ Message ------',
+      form.message || '(no message)',
+      '',
+      '------',
+      'Sent from the Monarchy Knuckle Games contact form',
+      'https://therealmsurvivorrpg.com',
+    ];
+
     const subject = encodeURIComponent(
-      form.subject || `Hello from ${form.name || 'a Realm Survivor fan'}`,
+      form.subject?.trim()
+        ? `[Realm Survivor RPG] ${form.subject.trim()}`
+        : `[Realm Survivor RPG] Message from ${form.name || 'a fan'}`,
     );
-    const body = encodeURIComponent(
-      `${form.message}\n\n— ${form.name || 'Anonymous'}\nReply to: ${form.email || '(no email provided)'}`,
-    );
-    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+    const body = encodeURIComponent(lines.join('\r\n'));
+
+    const mailto = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+
+    // Anchor-click is more reliable than window.location across browsers
+    // (especially Safari/iOS and some Chrome PWA contexts).
+    const a = document.createElement('a');
+    a.href = mailto;
+    a.rel = 'noopener noreferrer';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+
     setSent(true);
   };
 
@@ -175,7 +202,8 @@ export default function Pimps() {
 
               <div className="flex flex-wrap items-center justify-between gap-4 pt-2">
                 <p className="text-xs text-white/65" data-testid="mk-form-note">
-                  Submitting opens your email client with the message pre-filled.
+                  Hitting Send opens your default mail app (Gmail, Outlook, Mail, etc.) with
+                  the message pre-filled and addressed to {CONTACT_EMAIL}. Just press send.
                 </p>
                 <button
                   type="submit"
@@ -191,15 +219,16 @@ export default function Pimps() {
                   className="rounded-md border border-brand-purple/40 bg-brand-purple/10 px-4 py-3 text-sm text-white/95"
                   data-testid="mk-form-sent"
                 >
-                  Thanks! Your email client should have opened with the message ready to send. If
-                  not, you can reach us directly at{' '}
+                  Your mail app should have opened with the message ready to send to{' '}
+                  <strong>{CONTACT_EMAIL}</strong>. If nothing happened (some browsers block
+                  mailto links), you can copy the address or click{' '}
                   <a
                     href={`mailto:${CONTACT_EMAIL}`}
                     className="underline decoration-brand-purple/70 underline-offset-4"
                   >
-                    {CONTACT_EMAIL}
-                  </a>
-                  .
+                    here
+                  </a>{' '}
+                  to try again.
                 </p>
               )}
             </motion.form>
