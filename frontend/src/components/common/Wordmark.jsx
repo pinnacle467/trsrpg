@@ -7,8 +7,8 @@ import { GAME } from '@/data/game';
 // Sizes are tuned smaller so both logos + the full nav fit cleanly at every breakpoint.
 export const Wordmark = ({ className, size = 'navSm' }) => {
   const heights = {
-    navSm: 'h-[7.5rem] sm:h-[9.5rem] lg:h-[12rem]',
-    nav: 'h-[8.5rem] sm:h-[10.5rem] lg:h-[14rem]',
+    navSm: 'h-[6rem] sm:h-[7.6rem] lg:h-[9.6rem]',
+    nav: 'h-[6.8rem] sm:h-[8.4rem] lg:h-[11.2rem]',
     sm: 'h-16 sm:h-20',
     md: 'h-24',
     lg: 'h-32 sm:h-44',
@@ -26,7 +26,7 @@ export const Wordmark = ({ className, size = 'navSm' }) => {
       data-testid="wordmark-logos"
     >
       <Link
-        to="/pimps"
+        to="/mkgames"
         aria-label="Monarchy Knuckle Games"
         data-testid="wordmark-mk-logo"
         className="inline-flex shrink-0 items-center"

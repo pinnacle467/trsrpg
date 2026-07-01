@@ -6,7 +6,7 @@ import ScrollToTop from "@/components/layout/ScrollToTop";
 import Home from "@/pages/Home";
 import Media from "@/pages/Media";
 import Support from "@/pages/Support";
-import Pimps from "@/pages/Pimps";
+import MKGames from "@/pages/MKGames";
 import NotFound from "@/pages/NotFound";
 
 const Page = ({ children }) => (
@@ -28,7 +28,7 @@ const AnimatedRoutes = () => {
         <Route path="/" element={<Page><Home /></Page>} />
         <Route path="/media" element={<Page><Media /></Page>} />
         <Route path="/support" element={<Page><Support /></Page>} />
-        <Route path="/pimps" element={<Page><Pimps /></Page>} />
+        <Route path="/mkgames" element={<Page><MKGames /></Page>} />
         <Route path="*" element={<Page><NotFound /></Page>} />
       </Routes>
     </AnimatePresence>

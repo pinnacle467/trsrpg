@@ -9,7 +9,7 @@ import { MK_LOGO } from '@/data/images';
 
 const CONTACT_EMAIL = 'support@therealmsurvivorrpg.com';
 
-export default function Pimps() {
+export default function MKGames() {
   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' });
   const [sent, setSent] = useState(false);
 

@@ -38,14 +38,14 @@ export const Navbar = () => {
         <div className="mx-auto flex w-full max-w-[1600px] items-center justify-between gap-4 px-5 sm:px-8">
           <Wordmark size="navSm" />
 
-          <nav className="hidden lg:flex flex-1 items-center justify-center gap-10 xl:gap-14" aria-label="Primary">
+          <nav className="hidden lg:flex flex-1 items-center justify-center gap-8 xl:gap-11" aria-label="Primary">
             {NAV_LINKS.map((l) => (
               <Link
                 key={l.to}
                 to={l.to}
                 data-testid={`nav-${l.label.toLowerCase()}`}
                 className={cn(
-                  'font-display uppercase text-2xl xl:text-3xl tracking-wide whitespace-nowrap transition-colors link-underline [text-shadow:_0_2px_10px_rgba(0,0,0,0.95),_0_0_2px_rgba(0,0,0,0.9)]',
+                  'font-display uppercase text-xl xl:text-2xl tracking-wide whitespace-nowrap transition-colors link-underline [text-shadow:_0_2px_10px_rgba(0,0,0,0.95),_0_0_2px_rgba(0,0,0,0.9)]',
                   isActive(l.to) ? 'text-white' : 'text-white/95 hover:text-white',
                 )}
               >
@@ -58,10 +58,10 @@ export const Navbar = () => {
             <GButton
               href={GAME.steam}
               size="sm"
-              className="hidden whitespace-nowrap sm:inline-flex !text-lg !px-7 !py-4 !gap-2.5 [text-shadow:_0_2px_8px_rgba(0,0,0,0.7)]"
+              className="hidden whitespace-nowrap sm:inline-flex !text-base !px-6 !py-3 !gap-2 [text-shadow:_0_2px_8px_rgba(0,0,0,0.7)]"
               data-testid="nav-wishlist"
             >
-              <Gamepad2 size={22} /> Wishlist on Steam
+              <Gamepad2 size={18} /> Wishlist on Steam
             </GButton>
             <button
               onClick={() => setOpen(true)}
